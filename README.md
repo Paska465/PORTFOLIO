@@ -38,7 +38,7 @@ No framework, no build step, no tracking — one HTML file, one stylesheet, one 
 ## Structure
 
 ```text
-BIG PICKLE/
+PORTFOLIO/
 ├── index.html                   # the portfolio
 ├── resume.html                  # printable one-page résumé
 ├── 404.html                     # custom error page
