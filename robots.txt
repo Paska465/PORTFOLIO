@@ -1,0 +1,6 @@
+# Crawl everything except build cruft.
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://example.com/sitemap.xml

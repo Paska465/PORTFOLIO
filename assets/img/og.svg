@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Itumeleng — data scientist and front-end developer">
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7cb4ff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#7cb4ff" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0a0b0d"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <g transform="translate(72 70)">
+    <rect width="44" height="44" rx="12" fill="none" stroke="#7cb4ff" stroke-opacity="0.4" stroke-width="1.5"/>
+    <path d="M9 31 L18 21 L24.5 26 L35 11" fill="none" stroke="#7cb4ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="35" cy="11" r="3.4" fill="#7cb4ff"/>
+  </g>
+
+  <text x="132" y="102" fill="#93988f" font-family="ui-monospace, Menlo, monospace" font-size="17" letter-spacing="3">ITUMELENG · KIMBERLEY</text>
+
+  <text x="70" y="262" fill="#eceee9" font-family="Georgia, 'Times New Roman', serif" font-size="96" letter-spacing="-2">Data scientist who</text>
+  <text x="70" y="368" fill="#eceee9" font-family="Georgia, 'Times New Roman', serif" font-size="96" letter-spacing="-2">ships the</text>
+  <text x="70" y="474" fill="#7cb4ff" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="96" letter-spacing="-2">interface.</text>
+
+  <text x="72" y="560" fill="#93988f" font-family="ui-monospace, Menlo, monospace" font-size="20" letter-spacing="1.5">PYTHON · SQL · HTML · CSS · JAVASCRIPT</text>
+
+  <g transform="translate(760 300)">
+    <path d="M0 150 L40 120 L80 132 L120 88 L160 100 L200 58 L240 74 L280 20" fill="none" stroke="#7cb4ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M0 150 L40 120 L80 132 L120 88 L160 100 L200 58 L240 74 L280 20 L280 210 L0 210 Z" fill="url(#fade)"/>
+    <circle cx="280" cy="20" r="7" fill="#7cb4ff"/>
+    <g stroke="#ffffff" stroke-opacity="0.12">
+      <path d="M0 60 H280"/>
+      <path d="M0 110 H280"/>
+      <path d="M0 160 H280"/>
+    </g>
+  </g>
+</svg>

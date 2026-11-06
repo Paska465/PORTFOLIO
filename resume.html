@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Résumé — Itumeleng, Data Scientist &amp; Front-End Developer</title>
+  <meta name="description" content="One-page résumé for Itumeleng: data science, analytics engineering and front-end development." />
+  <meta name="theme-color" content="#0a0b0d" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .resume {
+      max-width: 54rem;
+      margin-inline: auto;
+      padding: clamp(2rem, 6vw, 4rem) var(--gutter) 5rem;
+    }
+    .resume-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--line-strong);
+    }
+    .resume h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 6vw, 3.6rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+    }
+    .resume h1 em { color: var(--accent); font-style: italic; }
+    .resume-role {
+      margin-top: 0.5rem;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .resume-contact {
+      display: grid;
+      gap: 0.2rem;
+      color: var(--text-soft);
+      font-size: 0.82rem;
+      text-align: right;
+    }
+    .resume-contact a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+    .resume-contact a:hover { color: var(--accent); border-color: var(--accent); }
+    .resume-summary {
+      margin-top: 1.4rem;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      max-width: 68ch;
+    }
+    .resume-block { margin-top: 2.4rem; }
+    .resume-block > h2 {
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .resume-entry {
+      display: grid;
+      grid-template-columns: 9.5rem minmax(0, 1fr);
+      gap: 1rem;
+      padding-block: 0.9rem;
+    }
+    .resume-entry + .resume-entry { border-top: 1px dashed var(--line); }
+    .resume-when {
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding-top: 0.2rem;
+    }
+    .resume-entry h3 { font-size: 0.98rem; font-weight: 500; }
+    .resume-entry .org { color: var(--muted); font-weight: 400; }
+    .resume-entry ul { display: grid; gap: 0.3rem; margin-top: 0.45rem; }
+    .resume-entry li {
+      position: relative;
+      padding-left: 0.9rem;
+      color: var(--text-soft);
+      font-size: 0.84rem;
+      line-height: 1.6;
+    }
+    .resume-entry li::before {
+      content: "";
+      position: absolute; left: 0; top: 0.68em;
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--line-strong);
+    }
+    .resume-skills { display: grid; gap: 0.5rem; }
+    .resume-skills div { display: grid; grid-template-columns: 8.5rem 1fr; gap: 1rem; align-items: baseline; }
+    .resume-skills dt {
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .resume-skills dd { color: var(--text-soft); font-size: 0.85rem; }
+    .resume-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+    .resume-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    @media (max-width: 680px) {
+      .resume-entry { grid-template-columns: 1fr; gap: 0.3rem; }
+      .resume-when { text-transform: uppercase; letter-spacing: 0.08em; }
+      .resume-contact { text-align: left; }
+      .resume-skills div { grid-template-columns: 1fr; gap: 0.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume">
+    <header class="resume-top">
+      <div>
+        <h1>Itumeleng <em>·</em></h1>
+        <p class="resume-role">Data Scientist · Front-End Developer</p>
+      </div>
+      <div class="resume-contact">
+        <a href="mailto:itumelengmosesane22@gmail.com">itumelengmosesane22@gmail.com</a>
+        <span>Kimberley, South Africa</span>
+        <span>github.com · linkedin.com · kaggle.com</span>
+      </div>
+    </header>
+
+    <p class="resume-summary">
+      Final-year BSc Data Science student working across machine learning, analytics engineering and
+      hand-written front-end. I build the whole path from cleaned data to a shipped interface —
+      churn models with explanations, forecast pipelines, and dashboards people actually open.
+    </p>
+
+    <section class="resume-block" aria-labelledby="r-experience">
+      <h2 id="r-experience">Experience</h2>
+
+      <article class="resume-entry">
+        <p class="resume-when">Feb 2026 — Present</p>
+        <div>
+          <h3>Data Science Intern <span class="org">· Fintech (remote)</span></h3>
+          <ul>
+            <li>Built a churn model (XGBoost, SHAP) scoring 1.2M customers; AUC 0.91, precision 0.84 at threshold.</li>
+            <li>Replaced a 40-minute manual SQL pull with dbt models and a self-serve Streamlit report.</li>
+            <li>Designed and read out three A/B tests with pre-registered hypotheses.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="resume-entry">
+        <p class="resume-when">Jun 2025 — Dec 2025</p>
+        <div>
+          <h3>Front-End Developer <span class="org">· Freelance</span></h3>
+          <ul>
+            <li>Shipped 7 static marketing sites; median Lighthouse performance 98, no third-party JS.</li>
+            <li>Reduced one client's page weight from 4.1 MB to 260 KB; bounce rate halved.</li>
+            <li>Delivered a one-page handover document with every project.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="resume-entry">
+        <p class="resume-when">Sep 2024 — May 2025</p>
+        <div>
+          <h3>Analytics Assistant <span class="org">· University research group</span></h3>
+          <ul>
+            <li>Cleaned and documented a 4,000-respondent survey pipeline in R; reproducible in one command.</li>
+            <li>Produced figures for two published papers and an internal policy brief.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="resume-block" aria-labelledby="r-education">
+      <h2 id="r-education">Education</h2>
+      <article class="resume-entry">
+        <p class="resume-when">Feb 2023 — Nov 2026</p>
+        <div>
+          <h3>BSc Data Science <span class="org">· University of Johannesburg</span></h3>
+          <ul>
+            <li>Capstone: forecasting municipal service demand. Coursework in inference, ML, databases, linear algebra.</li>
+            <li>Tutor for first-year programming (Python and SQL), 30 students.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="resume-block" aria-labelledby="r-skills">
+      <h2 id="r-skills">Skills</h2>
+      <dl class="resume-skills">
+        <div><dt>Languages</dt><dd>Python, SQL, JavaScript (ES2023), R, Bash, HTML, CSS</dd></div>
+        <div><dt>Data science</dt><dd>scikit-learn, XGBoost, LightGBM, pandas, NumPy, PyTorch, SHAP, statsmodels</dd></div>
+        <div><dt>Analytics</dt><dd>dbt, BigQuery, Postgres, DuckDB, Parquet, Power BI, Plotly, D3, Airflow</dd></div>
+        <div><dt>Front-end</dt><dd>Semantic HTML, modern CSS (grid, container queries), DOM APIs, SVG, WCAG 2.2, Core Web Vitals</dd></div>
+        <div><dt>Tooling</dt><dd>Git, GitHub Actions, Docker, pytest, Playwright, Figma, LaTeX</dd></div>
+      </dl>
+    </section>
+
+    <section class="resume-block" aria-labelledby="r-projects">
+      <h2 id="r-projects">Selected projects</h2>
+      <dl class="resume-skills">
+        <div><dt>Churn Radar</dt><dd>Churn model with SHAP explanations, FastAPI service and review dashboard. AUC 0.91.</dd></div>
+        <div><dt>Demand Line</dt><dd>Hierarchical forecast for 340 store–SKU pairs, MinT reconciliation. MAPE 8.4%.</dd></div>
+        <div><dt>Signal Screener</dt><dd>Browser-only stock screener in vanilla JS with IndexedDB. 41 KB total, zero dependencies.</dd></div>
+      </dl>
+    </section>
+
+    <footer class="resume-footer">
+      <p>References available on request.</p>
+      <div class="resume-actions">
+        <a class="button button-ghost" href="index.html">Back to portfolio</a>
+        <button class="button button-primary" type="button" onclick="window.print()">Print / save as PDF</button>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

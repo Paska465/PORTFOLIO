@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page not found — Itumeleng</title>
+  <meta name="description" content="That page doesn't exist. Head back to the portfolio." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0a0b0d" />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        document.documentElement.dataset.theme = stored || 'dark';
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
+  <style>
+    .error-page {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      padding: 2rem var(--gutter);
+      text-align: center;
+    }
+    .error-inner { max-width: 34rem; }
+    .error-code {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .error-page h1 {
+      margin-top: 1rem;
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 8vw, 4.4rem);
+      font-weight: 400;
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+    }
+    .error-page h1 em { font-style: italic; color: var(--accent); }
+    .error-page p {
+      margin-top: 1rem;
+      color: var(--muted);
+    }
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-top: 1.8rem;
+    }
+    .error-chart { margin: 2rem auto 0; max-width: 20rem; opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <main class="error-page">
+    <div class="error-inner">
+      <p class="error-code">Error 404</p>
+      <h1>This row is <em>missing</em> from the table.</h1>
+      <p>The page moved, or it never existed. Either way, the join returned nothing.</p>
+
+      <svg class="error-chart" viewBox="0 0 320 120" role="img" aria-label="A flat line with one point off the chart" focusable="false">
+        <g stroke="var(--line)" stroke-width="1">
+          <line x1="0" y1="30" x2="320" y2="30" />
+          <line x1="0" y1="70" x2="320" y2="70" />
+          <line x1="0" y1="110" x2="320" y2="110" />
+        </g>
+        <path d="M0 96 L60 92 L120 98 L160 94" fill="none" stroke="var(--line-strong)" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 5" />
+        <circle cx="230" cy="52" r="5" fill="var(--accent)" />
+        <path d="M236 52 L300 52" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="3 4" />
+      </svg>
+
+      <div class="error-actions">
+        <a class="button button-primary" href="/index.html">Back to the portfolio</a>
+        <a class="button button-ghost" href="/#contact">Report a broken link</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

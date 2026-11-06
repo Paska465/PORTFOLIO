@@ -1,0 +1,50 @@
+ITUMELENG — Data Scientist & Front-End Developer
+Kimberley, South Africa · itumelengmosesane22@gmail.com
+github.com · linkedin.com · kaggle.com
+
+SUMMARY
+Final-year BSc Data Science student working across machine learning, analytics
+engineering and hand-written front-end. I build the whole path from cleaned data
+to a shipped interface: churn models with explanations, forecast pipelines, and
+dashboards people actually open.
+
+EXPERIENCE
+Data Science Intern — Fintech (remote)                                   Feb 2026 – Present
+- Built a churn model (XGBoost, SHAP) scoring 1.2M customers; AUC 0.91,
+  precision 0.84 at the chosen threshold.
+- Replaced a 40-minute manual SQL pull with dbt models and a self-serve
+  Streamlit report.
+- Designed and read out three A/B tests with pre-registered hypotheses.
+
+Front-End Developer — Freelance                                     Jun 2025 – Dec 2025
+- Shipped 7 static marketing sites; median Lighthouse performance 98,
+  no third-party JavaScript.
+- Reduced one client's page weight from 4.1 MB to 260 KB; bounce rate halved.
+- Delivered a one-page handover document with every project.
+
+Analytics Assistant — University research group                    Sep 2024 – May 2025
+- Cleaned and documented a 4,000-respondent survey pipeline in R, reproducible
+  in one command.
+- Produced figures for two published papers and an internal policy brief.
+
+EDUCATION
+BSc Data Science — University of Johannesburg                       Feb 2023 – Nov 2026
+- Capstone: forecasting municipal service demand.
+- Tutor for first-year programming (Python and SQL), 30 students.
+
+SKILLS
+Languages      Python, SQL, JavaScript (ES2023), R, Bash, HTML, CSS
+Data science   scikit-learn, XGBoost, LightGBM, pandas, NumPy, PyTorch, SHAP
+Analytics      dbt, BigQuery, Postgres, DuckDB, Parquet, Power BI, Plotly, D3
+Front-end      Semantic HTML, modern CSS, DOM APIs, SVG, WCAG 2.2, Core Web Vitals
+Tooling        Git, GitHub Actions, Docker, pytest, Playwright, Figma, LaTeX
+
+SELECTED PROJECTS
+Churn Radar     Churn model with SHAP explanations, FastAPI service and review
+                dashboard. AUC 0.91.
+Demand Line     Hierarchical forecast for 340 store-SKU pairs, MinT
+                reconciliation. MAPE 8.4%.
+Signal Screener Browser-only stock screener in vanilla JS with IndexedDB.
+                41 KB total, zero dependencies.
+
+References available on request.

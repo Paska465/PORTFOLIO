@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Itumeleng — Data Scientist &amp; Front-End Developer</title>
+  <meta name="description" content="Portfolio of Itumeleng, a data scientist and front-end developer building models, dashboards and fast, accessible interfaces with Python, SQL and hand-written HTML, CSS and JavaScript." />
+  <meta name="author" content="Itumeleng" />
+  <meta name="theme-color" content="#0a0b0d" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f6f5f0" media="(prefers-color-scheme: light)" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Itumeleng — Data &amp; Web" />
+  <meta property="og:title" content="Itumeleng — Data Scientist &amp; Front-End Developer" />
+  <meta property="og:description" content="Models that explain themselves. Interfaces that load in a blink. Selected work in machine learning, analytics and hand-built front-ends." />
+  <meta property="og:image" content="https://example.com/assets/img/og.svg" />
+  <meta property="og:image:alt" content="Itumeleng — data scientist and front-end developer portfolio" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Itumeleng — Data Scientist &amp; Front-End Developer" />
+  <meta name="twitter:description" content="Models that explain themselves. Interfaces that load in a blink." />
+  <meta name="twitter:image" content="https://example.com/assets/img/og.svg" />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Set the theme before first paint to avoid a flash of the wrong colour. -->
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var forced = new URLSearchParams(location.search).get('theme');
+        var stored = localStorage.getItem('theme');
+        var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        document.documentElement.dataset.theme =
+          forced === 'light' || forced === 'dark' ? forced : stored || (prefersLight ? 'light' : 'dark');
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Itumeleng",
+    "jobTitle": "Data Scientist & Front-End Developer",
+    "description": "Data scientist and front-end developer working across machine learning, analytics and accessible, hand-built web interfaces.",
+    "url": "https://example.com/",
+    "knowsAbout": ["Machine learning", "Python", "SQL", "Data visualisation", "HTML", "CSS", "JavaScript", "Accessibility"],
+    "sameAs": [
+      "https://github.com/",
+      "https://www.linkedin.com/",
+      "https://www.kaggle.com/"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Itumeleng — back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+            <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="9" fill="none" stroke="currentColor" stroke-opacity="0.35" />
+            <path d="M8 22.5 L13 15.5 L17.5 19 L24 8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="24" cy="8.5" r="2.4" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Itumeleng</span>
+          <span class="brand-role">Data · Web</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="nav-resume"><a href="resume.html">Résumé<span class="nav-resume-meta">View &amp; print</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button palette-trigger" type="button" data-palette-open aria-label="Open quick navigation (press Control K)">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <circle cx="11" cy="11" r="6.5" />
+            <path d="m16 16 4 4" />
+          </svg>
+        </button>
+
+        <button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 14.5A8 8 0 0 1 9.5 4a8.2 8.2 0 1 0 10.5 10.5Z" />
+          </svg>
+        </button>
+
+        <a class="button button-ghost header-resume" href="resume.html" aria-label="Résumé — view and print">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+            <path d="M14 3v5h5" />
+            <path d="M9 13h6M9 17h4" />
+          </svg>
+          <span class="header-resume-label">Résumé</span>
+        </a>
+
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+          <span class="menu-lines" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ───────────────────────────── Hero ───────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to graduate roles &amp; freelance — Jan 2027
+          </p>
+
+          <h1 id="hero-title" class="hero-title">
+            I turn messy data into
+            <em>decisions</em>
+            <span class="hero-title-line">and ship the interface.</span>
+          </h1>
+
+          <p class="hero-lede">
+            Data scientist and front-end developer. I model, forecast and explain — then build the
+            thing people actually use: fast, accessible, hand-written HTML, CSS and JavaScript.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">
+              View selected work
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14m0 0-6-6m6 6-6 6" />
+              </svg>
+            </a>
+            <button class="button button-quiet" type="button" data-copy="itumelengmosesane22@gmail.com" data-copy-label="itumelengmosesane22@gmail.com">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="5" width="16" height="14" rx="2.5" />
+                <path d="m5 7 7 5.5L19 7" />
+              </svg>
+              <span data-copy-text>itumelengmosesane22@gmail.com</span>
+            </button>
+          </div>
+
+          <dl class="hero-facts">
+            <div>
+              <dt>Based in</dt>
+              <dd>Kimberley, ZA</dd>
+            </div>
+            <div>
+              <dt>Currently</dt>
+              <dd>BSc Data Science</dd>
+            </div>
+            <div>
+              <dt>Toolbox</dt>
+              <dd>Python · SQL · JS</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="hero-visual" aria-labelledby="hero-chart-caption">
+          <div class="chart-card">
+            <div class="chart-card-head">
+              <div>
+                <p class="chart-label">Model performance</p>
+                <p class="chart-title">Churn probability · last 90 days</p>
+              </div>
+              <span class="chip chip-live">Live</span>
+            </div>
+
+            <svg class="chart" viewBox="0 0 420 220" role="img" aria-label="Line chart of predicted churn probability over 90 days, rising from 0.18 to 0.62 with a sharp drop after a retention campaign on day 61." focusable="false">
+              <defs>
+                <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.34" />
+                  <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <g class="chart-grid" aria-hidden="true">
+                <line x1="0" y1="40" x2="420" y2="40" />
+                <line x1="0" y1="90" x2="420" y2="90" />
+                <line x1="0" y1="140" x2="420" y2="140" />
+                <line x1="0" y1="190" x2="420" y2="190" />
+              </g>
+              <path class="chart-area" d="M0 168 L36 152 L72 158 L108 132 L144 138 L180 108 L216 96 L252 104 L288 74 L300 70 L312 128 L348 118 L384 86 L420 78 L420 200 L0 200 Z" fill="url(#areaFill)" />
+              <path class="chart-line" d="M0 168 L36 152 L72 158 L108 132 L144 138 L180 108 L216 96 L252 104 L288 74 L300 70 L312 128 L348 118 L384 86 L420 78" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              <g class="chart-points">
+                <circle cx="300" cy="70" r="4" />
+                <circle cx="312" cy="128" r="4" />
+                <circle cx="420" cy="78" r="4" />
+              </g>
+              <g class="chart-annotate">
+                <line x1="300" y1="70" x2="300" y2="200" stroke-dasharray="3 4" />
+                <text x="308" y="52">campaign</text>
+              </g>
+            </svg>
+
+            <dl class="chart-stats">
+              <div>
+                <dt>AUC</dt>
+                <dd>0.91</dd>
+              </div>
+              <div>
+                <dt>Precision</dt>
+                <dd>0.84</dd>
+              </div>
+              <div>
+                <dt>Rows scored</dt>
+                <dd>1.2M</dd>
+              </div>
+            </dl>
+          </div>
+          <figcaption id="hero-chart-caption" class="chart-caption">
+            Illustrative output from the churn model in <a href="#work">Churn Radar</a>.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="shell stack-strip" role="region" aria-label="Tools I work with">
+        <span class="stack-strip-label">Daily drivers</span>
+        <ul class="stack-list">
+          <li>Python</li>
+          <li>SQL</li>
+          <li>scikit-learn</li>
+          <li>dbt</li>
+          <li>Pandas</li>
+          <li>Figma</li>
+          <li>Vanilla JS</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── Stats ───────────────────────────── -->
+    <section class="stats-band" aria-label="Career at a glance">
+      <div class="shell stats-grid">
+        <div class="stat" data-reveal>
+          <span class="stat-value" data-count="14" data-suffix="+">14+</span>
+          <span class="stat-label">Projects shipped</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-value" data-count="6" data-suffix="">6</span>
+          <span class="stat-label">Models in production</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-value" data-count="98" data-prefix="" data-suffix="%">98%</span>
+          <span class="stat-label">Lighthouse, median</span>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-value" data-count="40" data-suffix="+">40+</span>
+          <span class="stat-label">Open datasets cleaned</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── Work ───────────────────────────── -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <header class="section-head">
+          <p class="section-kicker"><span>01</span> Selected work</p>
+          <h2 id="work-title" class="section-title">Six things worth scrolling for</h2>
+          <p class="section-lede">
+            A mix of modelling, analytics engineering and front-end builds. Each one solved a real
+            problem for a real person — not a tutorial.
+          </p>
+        </header>
+
+        <div class="filter-bar" role="group" aria-label="Filter projects by discipline">
+          <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All<span class="filter-count">6</span></button>
+          <button class="filter-chip" type="button" data-filter="ml" aria-pressed="false">Machine learning<span class="filter-count">2</span></button>
+          <button class="filter-chip" type="button" data-filter="analytics" aria-pressed="false">Analytics<span class="filter-count">2</span></button>
+          <button class="filter-chip" type="button" data-filter="frontend" aria-pressed="false">Front-end<span class="filter-count">2</span></button>
+        </div>
+
+        <p class="filter-status" data-filter-status role="status" aria-live="polite">Showing all 6 projects</p>
+
+        <ul class="work-grid" data-work-grid>
+          <li class="work-card" data-category="ml" data-reveal>
+            <article aria-labelledby="project-churn">
+              <div class="work-thumb" aria-hidden="true">
+                <svg viewBox="0 0 300 160" aria-hidden="true" focusable="false">
+                  <g class="thumb-grid">
+                    <line x1="0" y1="40" x2="300" y2="40" /><line x1="0" y1="80" x2="300" y2="80" /><line x1="0" y1="120" x2="300" y2="120" />
+                  </g>
+                  <path d="M18 126 C 60 120, 70 84, 110 92 S 160 60, 196 72 S 250 40, 284 34" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" />
+                  <circle cx="284" cy="34" r="4.5" fill="var(--accent)" />
+                </svg>
+              </div>
+              <div class="work-body">
+                <p class="work-index">01 / Machine learning</p>
+                <h3 id="project-churn"><a href="#contact">Churn Radar</a></h3>
+                <p class="work-desc">
+                  Gradient-boosted churn model with SHAP explanations, wrapped in a FastAPI service and
+                  a one-screen review dashboard for the retention team.
+                </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li>Python</li><li>XGBoost</li><li>SHAP</li><li>FastAPI</li>
+                </ul>
+                <p class="work-metric"><span class="metric-label">Result</span> AUC 0.91 · 38% fewer false alarms</p>
+              </div>
+            </article>
+          </li>
+
+          <li class="work-card" data-category="ml" data-reveal>
+            <article aria-labelledby="project-forecast">
+              <div class="work-thumb" aria-hidden="true">
+                <svg viewBox="0 0 300 160" aria-hidden="true" focusable="false">
+                  <g class="thumb-bars">
+                    <rect x="22" y="96" width="20" height="52" rx="3" />
+                    <rect x="56" y="76" width="20" height="72" rx="3" />
+                    <rect x="90" y="104" width="20" height="44" rx="3" />
+                    <rect x="124" y="58" width="20" height="90" rx="3" />
+                    <rect x="158" y="84" width="20" height="64" rx="3" />
+                    <rect x="192" y="46" width="20" height="102" rx="3" />
+                  </g>
+                  <path d="M212 118 L246 92 L280 70" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 0" />
+                  <circle cx="280" cy="70" r="4.5" fill="var(--accent)" />
+                </svg>
+              </div>
+              <div class="work-body">
+                <p class="work-index">02 / Machine learning</p>
+                <h3 id="project-forecast"><a href="#contact">Demand Line</a></h3>
+                <p class="work-desc">
+                  Hierarchical forecast for 340 store–SKU pairs. LightGBM for the long tail, Prophet for
+                  seasonality, reconciled with a custom MinT implementation.
+                </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li>Python</li><li>LightGBM</li><li>Prophet</li><li>Airflow</li>
+                </ul>
+                <p class="work-metric"><span class="metric-label">Result</span> MAPE 8.4% · 22% less stockout</p>
+              </div>
+            </article>
+          </li>
+
+          <li class="work-card" data-category="analytics" data-reveal>
+            <article aria-labelledby="project-civic">
+              <div class="work-thumb" aria-hidden="true">
+                <svg viewBox="0 0 300 160" aria-hidden="true" focusable="false">
+                  <g class="thumb-dots" opacity="0.85">
+                    <circle cx="46" cy="52" r="7" /><circle cx="86" cy="86" r="11" /><circle cx="128" cy="60" r="6" />
+                    <circle cx="164" cy="100" r="14" /><circle cx="206" cy="66" r="9" /><circle cx="248" cy="92" r="6" />
+                    <circle cx="118" cy="118" r="5" /><circle cx="216" cy="122" r="7" />
+                  </g>
+                  <path d="M30 118 L70 74 L108 96 L150 54 L196 88 L236 44 L272 62" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="work-body">
+                <p class="work-index">03 / Analytics</p>
+                <h3 id="project-civic"><a href="#contact">Civic Insights</a></h3>
+                <p class="work-desc">
+                  A public dashboard over 40 municipal datasets — dbt models, d3 choropleths and a
+                  plain-language methodology page so journalists can cite it.
+                </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li>dbt</li><li>DuckDB</li><li>D3</li><li>SQL</li>
+                </ul>
+                <p class="work-metric"><span class="metric-label">Result</span> 40 datasets · 9k monthly readers</p>
+              </div>
+            </article>
+          </li>
+
+          <li class="work-card" data-category="analytics" data-reveal>
+            <article aria-labelledby="project-cohort">
+              <div class="work-thumb" aria-hidden="true">
+                <svg viewBox="0 0 300 160" aria-hidden="true" focusable="false">
+                  <g class="thumb-heat" fill="var(--accent)">
+                    <rect x="36" y="30" width="30" height="22" rx="3" opacity="0.9" /><rect x="72" y="30" width="30" height="22" rx="3" opacity="0.7" /><rect x="108" y="30" width="30" height="22" rx="3" opacity="0.5" /><rect x="144" y="30" width="30" height="22" rx="3" opacity="0.35" /><rect x="180" y="30" width="30" height="22" rx="3" opacity="0.2" />
+                    <rect x="36" y="58" width="30" height="22" rx="3" opacity="0.75" /><rect x="72" y="58" width="30" height="22" rx="3" opacity="0.55" /><rect x="108" y="58" width="30" height="22" rx="3" opacity="0.4" /><rect x="144" y="58" width="30" height="22" rx="3" opacity="0.25" /><rect x="180" y="58" width="30" height="22" rx="3" opacity="0.12" />
+                    <rect x="36" y="86" width="30" height="22" rx="3" opacity="0.6" /><rect x="72" y="86" width="30" height="22" rx="3" opacity="0.42" /><rect x="108" y="86" width="30" height="22" rx="3" opacity="0.28" /><rect x="144" y="86" width="30" height="22" rx="3" opacity="0.16" /><rect x="180" y="86" width="30" height="22" rx="3" opacity="0.08" />
+                  </g>
+                  <g stroke="var(--line-strong)" stroke-width="1" opacity="0.5"><path d="M30 126h196" /></g>
+                </svg>
+              </div>
+              <div class="work-body">
+                <p class="work-index">04 / Analytics</p>
+                <h3 id="project-cohort"><a href="#contact">Cohort Studio</a></h3>
+                <p class="work-desc">
+                  A reusable retention toolkit: 12 dbt models, a cohort matrix macro and a test suite
+                  that catches date-spine gaps before they reach a slide.
+                </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li>dbt</li><li>BigQuery</li><li>Python</li><li>Great Expectations</li>
+                </ul>
+                <p class="work-metric"><span class="metric-label">Result</span> 12 models · 4h saved weekly</p>
+              </div>
+            </article>
+          </li>
+
+          <li class="work-card" data-category="frontend" data-reveal>
+            <article aria-labelledby="project-signal">
+              <div class="work-thumb" aria-hidden="true">
+                <svg viewBox="0 0 300 160" aria-hidden="true" focusable="false">
+                  <rect x="24" y="24" width="120" height="112" rx="8" fill="none" stroke="var(--line-strong)" />
+                  <path d="M38 108 L54 84 L70 94 L86 62 L102 76 L118 52 L132 60" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                  <rect x="160" y="24" width="116" height="30" rx="6" fill="none" stroke="var(--line-strong)" />
+                  <rect x="160" y="62" width="116" height="30" rx="6" fill="none" stroke="var(--line-strong)" />
+                  <rect x="160" y="100" width="76" height="30" rx="6" fill="none" stroke="var(--accent)" />
+                </svg>
+              </div>
+              <div class="work-body">
+                <p class="work-index">05 / Front-end</p>
+                <h3 id="project-signal"><a href="#contact">Signal Screener</a></h3>
+                <p class="work-desc">
+                  A browser-only stock screener that pulls OHLC data, runs the screen client-side and
+                  stores watchlists in IndexedDB. Zero dependencies, zero build step.
+                </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li>HTML</li><li>CSS</li><li>JavaScript</li><li>IndexedDB</li>
+                </ul>
+                <p class="work-metric"><span class="metric-label">Result</span> 0 deps · 41&nbsp;KB total</p>
+              </div>
+            </article>
+          </li>
+
+          <li class="work-card" data-category="frontend" data-reveal>
+            <article aria-labelledby="project-atlas">
+              <div class="work-thumb" aria-hidden="true">
+                <svg viewBox="0 0 300 160" aria-hidden="true" focusable="false">
+                  <rect x="30" y="34" width="110" height="92" rx="6" fill="none" stroke="var(--line-strong)" />
+                  <rect x="44" y="50" width="52" height="8" rx="4" fill="var(--accent)" opacity="0.9" />
+                  <rect x="44" y="68" width="82" height="6" rx="3" fill="currentColor" opacity="0.28" />
+                  <rect x="44" y="82" width="70" height="6" rx="3" fill="currentColor" opacity="0.2" />
+                  <rect x="44" y="102" width="40" height="12" rx="6" fill="var(--accent)" opacity="0.7" />
+                  <g stroke="var(--line-strong)" fill="none"><circle cx="212" cy="80" r="34" stroke-dasharray="2 5" /><circle cx="212" cy="80" r="18" /></g>
+                  <circle cx="212" cy="80" r="6" fill="var(--accent)" />
+                </svg>
+              </div>
+              <div class="work-body">
+                <p class="work-index">06 / Front-end</p>
+                <h3 id="project-atlas"><a href="#contact">Atlas Type System</a></h3>
+                <p class="work-desc">
+                  A design-token system and component library in plain CSS: fluid type scale, container
+                  queries, dark mode and WCAG AA contrast baked into the tokens.
+                </p>
+                <ul class="tag-list" aria-label="Technologies">
+                  <li>CSS</li><li>Design tokens</li><li>11ty</li><li>Accessibility</li>
+                </ul>
+                <p class="work-metric"><span class="metric-label">Result</span> WCAG AA · 0 CLS</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── About ───────────────────────────── -->
+    <section class="section section-alt" id="about" aria-labelledby="about-title">
+      <div class="shell about-grid">
+        <div class="about-copy">
+          <p class="section-kicker"><span>02</span> About</p>
+          <h2 id="about-title" class="section-title">Two disciplines, one obsession: <em>clarity</em></h2>
+
+          <p class="lede">
+            I started in spreadsheets and ended up in both a Jupyter kernel and a code editor. The
+            through-line is the same question — how do you make something complicated look obvious?
+          </p>
+
+          <p>
+            On the data side I work in Python and SQL: cleaning, feature engineering, gradient boosting,
+            forecasting, and the unglamorous validation that decides whether a model is allowed near a
+            decision. On the web side I write HTML, CSS and JavaScript by hand — semantic markup,
+            container queries, real focus states.
+          </p>
+
+          <p>
+            I care about the handoff. A model nobody trusts is a spreadsheet with extra steps, and a
+            dashboard nobody can read is a screenshot. So I build the whole path: the pipeline, the
+            evaluation, the interface, and the note that explains what it does not do.
+          </p>
+
+          <ul class="principle-list">
+            <li><strong>Explain the model, not just the score.</strong> SHAP values, calibration curves and an honest limitations section.</li>
+            <li><strong>Ship the interface too.</strong> If the output needs a translator, it is not finished.</li>
+            <li><strong>Accessible by default.</strong> Keyboard paths, AA contrast and reduced-motion support from the first commit.</li>
+          </ul>
+        </div>
+
+        <aside class="about-card" aria-label="Profile summary">
+          <div class="id-card">
+            <div class="id-card-top">
+              <span class="monogram" aria-hidden="true">I</span>
+              <div>
+                <p class="id-name">Itumeleng</p>
+                <p class="id-role">Data Scientist · Front-End Dev</p>
+              </div>
+            </div>
+
+            <dl class="id-facts">
+              <div><dt>Location</dt><dd>Kimberley, South Africa</dd></div>
+              <div><dt>Studying</dt><dd>BSc Data Science, final year</dd></div>
+              <div><dt>Focus</dt><dd>Applied ML &amp; analytics UI</dd></div>
+              <div><dt>Languages</dt><dd>English, Sesotho, isiZulu</dd></div>
+            </dl>
+
+            <div class="id-footer">
+              <span class="chip chip-live">Open to work</span>
+              <a class="inline-link" href="#contact">Say hello</a>
+            </div>
+          </div>
+
+          <blockquote class="pull-quote">
+            <p>“The best dashboard is the one that answers the question before you finish asking it.”</p>
+          </blockquote>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── Skills ───────────────────────────── -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="shell">
+        <header class="section-head">
+          <p class="section-kicker"><span>03</span> Capabilities</p>
+          <h2 id="skills-title" class="section-title">What I actually use</h2>
+          <p class="section-lede">No badge wall. This is the stack I reach for when a deadline is real.</p>
+        </header>
+
+        <div class="skills-grid">
+          <section class="skill-column" aria-labelledby="skills-data">
+            <h3 id="skills-data">Data science</h3>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">Python</span>
+                <span class="skill-meter" role="progressbar" aria-label="Python proficiency" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"><span style="--level: 92%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">scikit-learn</span>
+                <span class="skill-meter" role="progressbar" aria-label="scikit-learn proficiency" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"><span style="--level: 88%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">Pandas / NumPy</span>
+                <span class="skill-meter" role="progressbar" aria-label="Pandas and NumPy proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span style="--level: 90%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">Statistics &amp; A/B testing</span>
+                <span class="skill-meter" role="progressbar" aria-label="Statistics and A/B testing proficiency" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"><span style="--level: 82%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">Time-series forecasting</span>
+                <span class="skill-meter" role="progressbar" aria-label="Time-series forecasting proficiency" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"><span style="--level: 78%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">Deep learning (PyTorch)</span>
+                <span class="skill-meter" role="progressbar" aria-label="Deep learning proficiency" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"><span style="--level: 68%"></span></span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="skill-column" aria-labelledby="skills-analytics">
+            <h3 id="skills-analytics">Analytics engineering</h3>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">SQL (Postgres, BigQuery)</span>
+                <span class="skill-meter" role="progressbar" aria-label="SQL proficiency" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span style="--level: 90%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">dbt</span>
+                <span class="skill-meter" role="progressbar" aria-label="dbt proficiency" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"><span style="--level: 84%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">Data modelling &amp; warehousing</span>
+                <span class="skill-meter" role="progressbar" aria-label="Data modelling proficiency" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span style="--level: 80%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">DuckDB / Parquet</span>
+                <span class="skill-meter" role="progressbar" aria-label="DuckDB and Parquet proficiency" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"><span style="--level: 76%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">Power BI &amp; Plotly</span>
+                <span class="skill-meter" role="progressbar" aria-label="Power BI and Plotly proficiency" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100"><span style="--level: 74%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">Git &amp; CI (GitHub Actions)</span>
+                <span class="skill-meter" role="progressbar" aria-label="Git and CI proficiency" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"><span style="--level: 82%"></span></span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="skill-column" aria-labelledby="skills-frontend">
+            <h3 id="skills-frontend">Front-end &amp; craft</h3>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-name">HTML &amp; semantics</span>
+                <span class="skill-meter" role="progressbar" aria-label="HTML proficiency" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"><span style="--level: 94%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">CSS &amp; responsive layout</span>
+                <span class="skill-meter" role="progressbar" aria-label="CSS proficiency" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"><span style="--level: 92%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">JavaScript (ES2023)</span>
+                <span class="skill-meter" role="progressbar" aria-label="JavaScript proficiency" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"><span style="--level: 86%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">Data visualisation (D3, SVG)</span>
+                <span class="skill-meter" role="progressbar" aria-label="Data visualisation proficiency" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span style="--level: 85%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">Accessibility (WCAG 2.2)</span>
+                <span class="skill-meter" role="progressbar" aria-label="Accessibility proficiency" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"><span style="--level: 88%"></span></span>
+              </li>
+              <li>
+                <span class="skill-name">Performance &amp; Core Web Vitals</span>
+                <span class="skill-meter" role="progressbar" aria-label="Performance proficiency" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"><span style="--level: 83%"></span></span>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="toolbelt" role="region" aria-labelledby="toolbelt-title">
+          <h3 id="toolbelt-title">Also in the bag</h3>
+          <ul class="chip-row">
+            <li>Jupyter</li><li>Streamlit</li><li>FastAPI</li><li>Docker</li><li>Airflow</li>
+            <li>pytest</li><li>Vite</li><li>11ty</li><li>Figma</li><li>R (tidyverse)</li>
+            <li>Excel</li><li>LaTeX</li><li>Playwright</li><li>Git</li><li>Linux</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── Experience ───────────────────────────── -->
+    <section class="section section-alt" id="experience" aria-labelledby="experience-title">
+      <div class="shell">
+        <header class="section-head">
+          <p class="section-kicker"><span>04</span> Track record</p>
+          <h2 id="experience-title" class="section-title">Where I've done the work</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-when">
+              <time datetime="2026-02">Feb 2026</time> — <span>Present</span>
+            </div>
+            <div class="timeline-what">
+              <h3>Data Science Intern <span class="timeline-org">· Fintech, remote</span></h3>
+              <p class="timeline-note">Retention analytics for a 1.2M-customer book.</p>
+              <ul>
+                <li>Built the churn model that now drives the monthly retention review; AUC 0.91, precision 0.84 at the chosen threshold.</li>
+                <li>Replaced a 40-minute manual SQL pull with a dbt model plus a Streamlit report the team runs itself.</li>
+                <li>Ran three A/B tests with pre-registered hypotheses; wrote the readouts, including the one that showed no effect.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-when">
+              <time datetime="2025-06">Jun 2025</time> — <time datetime="2025-12">Dec 2025</time>
+            </div>
+            <div class="timeline-what">
+              <h3>Front-End Developer (Freelance) <span class="timeline-org">· Small businesses</span></h3>
+              <p class="timeline-note">Marketing sites and internal dashboards, hand-built.</p>
+              <ul>
+                <li>Shipped 7 sites on a static stack; median Lighthouse performance 98, zero third-party JS.</li>
+                <li>Cut one client's page weight from 4.1&nbsp;MB to 260&nbsp;KB and halved their bounce rate.</li>
+                <li>Left every project with a one-page handover doc, so nobody had to call me to change a paragraph.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-when">
+              <time datetime="2024-09">Sep 2024</time> — <time datetime="2025-05">May 2025</time>
+            </div>
+            <div class="timeline-what">
+              <h3>Analytics Assistant <span class="timeline-org">· University research group</span></h3>
+              <p class="timeline-note">Survey data for a 4,000-respondent study.</p>
+              <ul>
+                <li>Cleaned and documented the survey pipeline in R; reproducible from raw CSV in one command.</li>
+                <li>Designed the figures for two published papers and an internal policy brief.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-when">
+              <time datetime="2023-02">Feb 2023</time> — <time datetime="2026-11">Nov 2026</time>
+            </div>
+            <div class="timeline-what">
+              <h3>BSc Data Science <span class="timeline-org">· University of Johannesburg</span></h3>
+              <p class="timeline-note">Coursework: statistical inference, machine learning, databases, linear algebra.</p>
+              <ul>
+                <li>Final-year capstone on forecasting municipal service demand; distinction average.</li>
+                <li>Tutor for first-year programming: 30 students, Python and SQL fundamentals.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── Writing ───────────────────────────── -->
+    <section class="section" id="writing" aria-labelledby="writing-title">
+      <div class="shell">
+        <header class="section-head">
+          <p class="section-kicker"><span>05</span> Notes</p>
+          <h2 id="writing-title" class="section-title">Things I wrote down</h2>
+          <p class="section-lede">Mostly for my future self. Occasionally useful to other people.</p>
+        </header>
+
+        <ul class="writing-grid">
+          <li>
+            <article class="note-card">
+              <a class="note-link" href="#contact">
+                <div class="note-meta">
+                  <time datetime="2026-10-18">18 Oct 2026</time>
+                  <span aria-hidden="true">·</span>
+                  <span>6 min read</span>
+                </div>
+                <h3>Your model's AUC is lying to you</h3>
+                <p>Why ranking metrics hide threshold pain, and the three plots I check before anyone sees a number.</p>
+                <span class="note-cta">Read the note <span aria-hidden="true">→</span></span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="note-card">
+              <a class="note-link" href="#contact">
+                <div class="note-meta">
+                  <time datetime="2026-09-02">2 Sep 2026</time>
+                  <span aria-hidden="true">·</span>
+                  <span>4 min read</span>
+                </div>
+                <h3>A dashboard is an argument</h3>
+                <p>Every chart makes a claim. If you cannot state the claim in one sentence, delete the chart.</p>
+                <span class="note-cta">Read the note <span aria-hidden="true">→</span></span>
+              </a>
+            </article>
+          </li>
+
+          <li>
+            <article class="note-card">
+              <a class="note-link" href="#contact">
+                <div class="note-meta">
+                  <time datetime="2026-07-21">21 Jul 2026</time>
+                  <span aria-hidden="true">·</span>
+                  <span>7 min read</span>
+                </div>
+                <h3>Vanilla JS is not a personality</h3>
+                <p>When a framework earns its weight — and the four cases where 40 lines of DOM code wins.</p>
+                <span class="note-cta">Read the note <span aria-hidden="true">→</span></span>
+              </a>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── Testimonials ───────────────────────────── -->
+    <section class="section section-tight" aria-labelledby="praise-title">
+      <div class="shell">
+        <h2 id="praise-title" class="visually-hidden">What collaborators say</h2>
+        <ul class="quote-grid">
+          <li>
+            <figure class="quote">
+              <blockquote><p>“The first analyst we've had who shipped the thing, not just the deck. Our retention meeting is now twenty minutes shorter.”</p></blockquote>
+              <figcaption>
+                <span class="quote-avatar" aria-hidden="true">N</span>
+                <span>
+                  <span class="quote-name">Naledi Mokoena</span>
+                  <span class="quote-role">Head of Growth, fintech client</span>
+                </span>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="quote">
+              <blockquote><p>“Pages came back faster than our old template, and the accessibility audit found nothing. That never happens.”</p></blockquote>
+              <figcaption>
+                <span class="quote-avatar" aria-hidden="true">D</span>
+                <span>
+                  <span class="quote-name">Daniel Kruger</span>
+                  <span class="quote-role">Founder, design studio</span>
+                </span>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="quote">
+              <blockquote><p>“Asked good questions about the data before writing any code. Rare in a student, useful in a colleague.”</p></blockquote>
+              <figcaption>
+                <span class="quote-avatar" aria-hidden="true">P</span>
+                <span>
+                  <span class="quote-name">Prof. P. Adeyemi</span>
+                  <span class="quote-role">Research supervisor</span>
+                </span>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────── Contact ───────────────────────────── -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-grid">
+        <div class="contact-copy">
+          <p class="section-kicker"><span>06</span> Contact</p>
+          <h2 id="contact-title" class="section-title">Got a dataset that needs a front door?</h2>
+          <p class="lede">
+            I take on a small number of freelance projects alongside my final year — dashboards,
+            forecasting, and sites that need to be fast. Graduate roles from January 2027.
+          </p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Email</span>
+              <a href="mailto:itumelengmosesane22@gmail.com">itumelengmosesane22@gmail.com</a>
+              <button class="copy-button" type="button" data-copy="itumelengmosesane22@gmail.com" aria-label="Copy email address to clipboard">
+                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round">
+                  <rect x="9" y="9" width="11" height="11" rx="2.5" />
+                  <path d="M5 15V6a2 2 0 0 1 2-2h8" />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <span class="contact-label">Elsewhere</span>
+              <span class="social-row">
+                <a href="https://github.com/" rel="me noopener noreferrer" target="_blank">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
+                <a href="https://www.linkedin.com/" rel="me noopener noreferrer" target="_blank">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+                <a href="https://www.kaggle.com/" rel="me noopener noreferrer" target="_blank">Kaggle<span class="visually-hidden"> (opens in a new tab)</span></a>
+              </span>
+            </li>
+            <li>
+              <span class="contact-label">Response</span>
+              <span>Within 2 working days</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" novalidate data-contact-form>
+          <p class="form-intro">Tell me what you're building. A rough sentence is enough.</p>
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Thandi Mokoena" required minlength="2" aria-describedby="name-error" />
+            <p class="field-error" id="name-error" aria-live="polite" data-error-for="name"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" spellcheck="false" placeholder="you@company.co.za" required aria-describedby="email-error" />
+            <p class="field-error" id="email-error" aria-live="polite" data-error-for="email"></p>
+          </div>
+
+          <div class="field">
+            <label for="topic">What do you need?</label>
+            <select id="topic" name="topic" required aria-describedby="topic-error">
+              <option value="">Choose one…</option>
+              <option>Dashboard or reporting</option>
+              <option>Forecasting or modelling</option>
+              <option>Data cleaning / audit</option>
+              <option>Website or landing page</option>
+              <option>Graduate role (2027)</option>
+              <option>Something else</option>
+            </select>
+            <p class="field-error" id="topic-error" aria-live="polite" data-error-for="topic"></p>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required minlength="20" placeholder="We have 18 months of sales data in Excel and no idea what to do with it…" aria-describedby="message-hint message-error"></textarea>
+            <p class="field-hint" id="message-hint">At least 20 characters. No attachments needed yet.</p>
+            <p class="field-error" id="message-error" aria-live="polite" data-error-for="message"></p>
+          </div>
+
+          <!-- Honeypot: hidden from people, tempting to bots. -->
+          <div class="honeypot" aria-hidden="true">
+            <label for="company-url">Company URL</label>
+            <input id="company-url" name="company-url" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button class="button button-primary form-submit" type="submit">
+            <span data-submit-label>Send message</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m0 0-6-6m6 6-6 6" />
+            </svg>
+          </button>
+
+          <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+          <p class="form-footnote">
+            This demo form opens your mail app with the message filled in. Wire it to a service
+            endpoint in <code>assets/js/main.js</code> to send silently.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="Back to top">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false">
+              <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="9" fill="none" stroke="currentColor" stroke-opacity="0.35" />
+              <path d="M8 22.5 L13 15.5 L17.5 19 L24 8.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="24" cy="8.5" r="2.4" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Itumeleng</span>
+            <span class="brand-role">Data · Web</span>
+          </span>
+        </a>
+        <p class="footer-note">
+          Hand-written HTML, CSS and JavaScript. No framework, no build step, no tracking.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <div>
+          <h2 class="footer-heading">Sections</h2>
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Elsewhere</h2>
+          <ul>
+            <li><a href="https://github.com/" target="_blank" rel="me noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="me noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://www.kaggle.com/" target="_blank" rel="me noopener noreferrer">Kaggle<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="mailto:itumelengmosesane22@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="shell footer-base">
+      <p>© <span data-year>2026</span> Itumeleng. Built in Kimberley.</p>
+      <p class="footer-keys">
+        Press <kbd>Ctrl</kbd> <kbd>K</kbd> to jump anywhere.
+      </p>
+      <button class="back-to-top" type="button" data-back-to-top>
+        Back to top
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 19V5m0 0-6 6m6-6 6 6" />
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Command palette -->
+  <dialog class="palette" data-palette aria-labelledby="palette-label">
+    <form method="dialog" class="palette-head">
+      <label class="visually-hidden" for="palette-input">Jump to a section or link</label>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+        <circle cx="11" cy="11" r="6.5" />
+        <path d="m16 16 4 4" />
+      </svg>
+      <input id="palette-input" type="search" placeholder="Jump to…" autocomplete="off" spellcheck="false" data-palette-input />
+      <button type="submit" class="palette-esc" aria-label="Close quick navigation">Esc</button>
+    </form>
+
+    <h2 id="palette-label" class="visually-hidden">Quick navigation</h2>
+    <ul class="palette-list" data-palette-list>
+      <li><a href="#work" data-palette-item><span class="palette-key">01</span> Selected work</a></li>
+      <li><a href="#about" data-palette-item><span class="palette-key">02</span> About</a></li>
+      <li><a href="#skills" data-palette-item><span class="palette-key">03</span> Skills</a></li>
+      <li><a href="#experience" data-palette-item><span class="palette-key">04</span> Experience</a></li>
+      <li><a href="#writing" data-palette-item><span class="palette-key">05</span> Writing</a></li>
+      <li><a href="#contact" data-palette-item><span class="palette-key">06</span> Contact</a></li>
+      <li><a href="mailto:itumelengmosesane22@gmail.com" data-palette-item><span class="palette-key">@</span> Email me</a></li>
+      <li><a href="assets/itumeleng-resume.txt" download data-palette-item><span class="palette-key">↓</span> Download résumé</a></li>
+    </ul>
+    <p class="palette-empty" data-palette-empty hidden>Nothing matches that. Try “work” or “contact”.</p>
+    <p class="palette-hint"><kbd>↑</kbd> <kbd>↓</kbd> to move · <kbd>Enter</kbd> to open · <kbd>Esc</kbd> to close</p>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite" data-toast hidden></div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
