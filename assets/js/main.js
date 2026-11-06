@@ -436,6 +436,15 @@
       }
     });
 
+    // Chromium's `type="search"` input swallows Escape to clear itself, which stops the
+    // dialog's native cancel event, so someone who types then presses Escape gets stuck.
+    dialog.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        close();
+      }
+    });
+
     items.forEach((item) => {
       item.setAttribute("role", "option");
       item.addEventListener("mouseenter", () => {
