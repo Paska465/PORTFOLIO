@@ -1,5 +1,7 @@
 # Itumeleng — Data Scientist & Front-End Developer
 
+**Live site: <https://paska465.github.io/PORTFOLIO/>**
+
 A modern, hand-built portfolio for a data scientist who also writes HTML, CSS and JavaScript.
 No framework, no build step, no tracking — one HTML file, one stylesheet, one script.
 
@@ -46,12 +48,15 @@ PORTFOLIO/
 │   ├── css/styles.css           # design system + all layout
 │   ├── js/main.js               # all behaviour, no dependencies
 │   ├── img/favicon.svg
-│   ├── img/og.svg               # social share card (1200×630)
+│   ├── img/og.png               # social share card, 1200×630 PNG
+│   ├── img/og.svg               # same card as a vector source
+│   ├── img/apple-touch-icon.png # 180×180 iOS home-screen icon
 │   └── itumeleng-resume.txt     # plain-text résumé for ATS uploads
 ├── docs/screenshots/            # reference renders
 ├── site.webmanifest
 ├── robots.txt
 ├── sitemap.xml
+├── .nojekyll                    # serve files as-is on GitHub Pages
 ├── .htmlvalidate.json
 └── README.md
 ```
@@ -127,13 +132,23 @@ Validated with `html-validate` (clean) and a Playwright pass at 390/768/900/1024
 
 ## Deploy
 
-**GitHub Pages** — push the folder, then Settings → Pages → deploy from branch root.
+**Live:** <https://paska465.github.io/PORTFOLIO/> — GitHub Pages, built from `main` at the repo root.
 
-**Netlify / Vercel** — drag the folder in, or connect the repo with no build command and `/` as the
-publish directory. `404.html` is picked up automatically by both.
+```powershell
+# what is currently configured
+gh api repos/Paska465/PORTFOLIO/pages --jq '{status, html_url, source}'
+```
 
-After deploying, replace `https://example.com` in `index.html`, `robots.txt` and `sitemap.xml` with
-your real domain.
+The build is plain static hosting: no Actions, no Jekyll (`.nojekyll` is present), no build step.
+Pushing to `main` republishes in about a minute.
+
+**Netlify / Vercel** — an alternative if the repo ever goes private again: drag the folder in, or
+connect the repo with no build command and `/` as the publish directory. `404.html` is picked up
+automatically by both.
+
+All absolute URLs (`canonical`, Open Graph, JSON-LD, `robots.txt`, `sitemap.xml`) already point at the
+Pages URL. If the site moves, change that one base in `index.html`, `resume.html`, `robots.txt` and
+`sitemap.xml`.
 
 ---
 

@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://paska465.github.io/PORTFOLIO/sitemap.xml
